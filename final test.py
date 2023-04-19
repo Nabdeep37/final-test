@@ -15,15 +15,15 @@ while(option!=5):
 #for adding a record use conditions for showing options
  if(option==1):
   n=input("Enter your name:")
-  if n is not n.isalpha():
+  if any(char.isdigit() for char in n):
     print("there is an error in your name")
   m=int(input("Enter your 10-digit mobile number:"))
   if len(str(m)) == 10:
     print("valid phone number")
+    print("Record added")
   else:
     print("invalid phone number")
   phonedirectory.update({n:m})
- print("Record added")
   
  #for search a record
  if(option==2):
